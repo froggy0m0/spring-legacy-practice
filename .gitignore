@@ -1,0 +1,51 @@
+# 이클립스/STS 설정 및 파일
+.metadata/
+.classpath
+.project
+.settings/
+.springBeans
+bin/
+tmp/
+tmp-*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.DS_Store
+.target/
+*.launch
+
+# Gradle 설정 및 로그
+.gradle/
+build/
+ 
+# Maven 설정 및 로그
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+
+# IntelliJ IDEA 설정 및 로그
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Visual Studio Code 설정 디렉토리
+.vscode/
+
+# Spring Boot 실행 로그
+log/
+log.*.log
+
+# 특정 IDE 파일
+.classpath
+.project
+
+# 개발 환경에 따른 프로퍼티 파일 (application-dev.properties, application-test.properties 등)
+application-*.properties
+
+# 로깅 디렉토리
+log/
+logs/
+logging/
