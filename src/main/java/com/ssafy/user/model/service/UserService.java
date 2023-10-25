@@ -4,6 +4,6 @@ import com.ssafy.user.model.UserDto;
 
 public interface UserService {
 
-	boolean login(UserDto userDto) throws Exception;
+	UserDto login(UserDto userDto) throws Exception;
 
 }

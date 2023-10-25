@@ -5,27 +5,27 @@ import java.util.ArrayList;
 import org.springframework.stereotype.Service;
 
 import com.ssafy.board.model.BoardDto;
-import com.ssafy.board.model.dao.BoardDAO;
+import com.ssafy.board.model.mapper.BoardMapper;
 
 @Service
 public class BoardServiceImpl implements BoardService {
 
-	private final BoardDAO boardDao;
+	private final BoardMapper boardMapper;
 	
-	public BoardServiceImpl(BoardDAO boardDao) {
+	public BoardServiceImpl(BoardMapper boardMapper) {
 		super();
-		this.boardDao = boardDao;
+		this.boardMapper = boardMapper;
 	}
 
 	@Override
 	public ArrayList<BoardDto> list() throws Exception {
-		return boardDao.list();
+		return boardMapper.list();
 		
 	}
 
 	@Override
 	public boolean regist(BoardDto boardDto) throws Exception {
-		return boardDao.regist(boardDto);
+		return boardMapper.regist(boardDto);
 	}
 
 }

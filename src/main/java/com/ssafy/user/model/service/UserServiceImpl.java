@@ -5,20 +5,20 @@ import java.sql.SQLException;
 import org.springframework.stereotype.Service;
 
 import com.ssafy.user.model.UserDto;
-import com.ssafy.user.model.dao.UserDAO;
+import com.ssafy.user.model.mapper.UserMapper;
 
 @Service
 public class UserServiceImpl implements UserService {
 	
-	private final UserDAO userDao;
+	private final UserMapper userMapper;
 	
-	public UserServiceImpl(UserDAO userDao) {
-		this.userDao = userDao;
+	public UserServiceImpl(UserMapper userMapper) {
+		this.userMapper = userMapper;
 	}
 
 	@Override
-	public boolean login(UserDto userDto) throws Exception {
-		return userDao.login(userDto);
+	public UserDto login(UserDto userDto) throws Exception {
+		return userMapper.login(userDto);
 	}
 
 }

@@ -1,11 +1,11 @@
-package com.ssafy.board.model.dao;
+package com.ssafy.board.model.mapper;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.ssafy.board.model.BoardDto;
 
-public interface BoardDAO {
+public interface BoardMapper {
 
 	ArrayList<BoardDto> list() throws SQLException;
 

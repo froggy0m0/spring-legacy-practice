@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssafy.user.model.mapper.UserMapper">
+	<resultMap type="UserDto" id="user">
+		<result column="user_id" property="userId"/>
+		<result column="user_password" property="userPassword"/>
+	</resultMap>
+	
+	<select id="login" parameterType="UserDto" resultMap="user">
+		select user_id, user_password
+		from user
+		where user_id = #{userId} and user_password = #{userPassword}
+	</select>
+</mapper>

@@ -24,9 +24,8 @@ public class UserController {
 	@PostMapping("/login")
 	private String login(UserDto userDto,Model model, HttpSession session) throws Exception {
 		
-		boolean check = userService.login(userDto);
-		System.out.println(check);
-		if(check==false) {
+		UserDto userInfo = userService.login(userDto);
+		if(!userInfo.getUserId().equals(userDto.getUserId())) {
 			model.addAttribute("msg", "로그인실패!");
 			model.addAttribute("url", "/");
 			return "/common/alert";
